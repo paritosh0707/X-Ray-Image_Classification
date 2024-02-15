@@ -1,10 +1,10 @@
 import logging
 import os
-from datetime import datetime
+from Xray.constants.training_pipeline import TIMESTAMP
 
-LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
+LOG_FILE = f"{TIMESTAMP}.log"
 
-log_path = os.path.join(os.getcwd(),"logs")
+log_path = os.path.join(os.getcwd(),"logs",TIMESTAMP)
 os.makedirs(log_path, exist_ok=True)
 
 LOG_FILE_PATH = os.path.join(log_path,LOG_FILE)
